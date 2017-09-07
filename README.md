@@ -2,6 +2,8 @@
 
 Vim syntax highlighting for Vue components.
 
+![vim-vue](https://i.imgur.com/7vpgGQG.png)
+
 ## Installation
 
 ### Using Vundle
