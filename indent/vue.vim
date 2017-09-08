@@ -32,7 +32,7 @@ function! GetVueIndent()
   elseif line =~ '[{([]$'
     return increase
   elseif synIDattr(synID(lnum, indent, 1), 'name') == 'pugBegin'
-    if line =~ '^\(meta\|link\|img\|hr\|br\|input\)[#.(]\?'
+    if line =~ '^\(|\|meta\|link\|img\|hr\|br\|input\)[#.(]\?'
       return indent
     else
       return increase
