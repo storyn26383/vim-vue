@@ -5,14 +5,14 @@ endif
 let b:did_indent = 1
 
 setlocal autoindent
-setlocal indentexpr=GetVueIndent()
+setlocal indentexpr=vue#GetVueIndent()
 setlocal indentkeys=o,O,*<Return>,0],0),0},!^F
 
-if exists("*GetVueIndent")
+if exists("*vue#GetVueIndent")
   finish
 endif
 
-function! GetVueIndent()
+function! vue#GetVueIndent()
   let lnum = prevnonblank(v:lnum - 1)
 
   if lnum == 0
