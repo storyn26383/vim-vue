@@ -17,9 +17,9 @@ endfunction
 function! vue#SetConfigs()
   let l:type = vue#IdentifySyntaxRegion()
 
-  if l:type == 'pug'
+  if l:type == 'pug' && &commentstring != '//- %s'
     setlocal commentstring=//-\ %s
-  else
+  elseif l:type =~ 'js\|css' && &commentstring != '// %s'
     setlocal commentstring=//\ %s
   endif
 endfunction
