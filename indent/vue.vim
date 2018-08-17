@@ -37,6 +37,8 @@ function! vue#GetVueIndent()
     else
       return increase
     endif
+  elseif line =~ '^<[a-z0-9-]\+[^>]*>$' && cline =~ '^</[a-z0-9-]\+>$'
+    return indent
   elseif line =~ '^<[a-z0-9-]\+[^>]*>$'
     if line =~ '^<\(meta\|link\|img\|hr\|br\|input\)[^>]*>$'
       return indent
