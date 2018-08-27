@@ -3,16 +3,20 @@ if exists('b:plugin_loaded') || !exists('g:loaded_commentary')
 endif
 
 function! vue#IdentifySyntaxRegion()
-  let l:syntax = synIDattr(synID(prevnonblank(line('.')), col('.'), 0), 'name')
+  let l:line = search('<\(template\|script\|style\)[^>]*>', 'bn')
+  let l:cline = line('.')
+  let l:content = getbufline(bufnr('%'), l:line, l:line)[0]
 
-  if l:syntax =~ '^pug'
-    return 'pug'
-  elseif l:syntax =~ '^\(js\|javaScript\)'
-    return 'js'
-  elseif l:syntax =~ '^css'
+  if l:line == l:cline
+    return 'html'
+  elseif l:content =~ '<style[^>]*>'
     return 'css'
-  elseif l:syntax =~ '^scss'
+  elseif l:content =~ '<style \+lang="scss"[^>]*>'
     return 'scss'
+  elseif l:content =~ '<script[^>]*>'
+    return 'js'
+  elseif l:content =~ '<template \+lang="pug"[^>]*>'
+    return 'pug'
   else
     return 'html'
   endif
