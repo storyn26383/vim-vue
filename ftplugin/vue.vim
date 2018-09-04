@@ -5,7 +5,7 @@ endif
 function! vue#IdentifySyntaxRegion()
   let l:line = search('<\(template\|script\|style\)[^>]*>', 'bn')
   let l:cline = line('.')
-  let l:content = getbufline(bufnr('%'), l:line, l:line)[0]
+  let l:content = get(getbufline(bufnr('%'), l:line, l:line), '')
 
   if l:line == l:cline
     return 'html'
