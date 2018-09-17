@@ -1,4 +1,4 @@
-if exists('b:plugin_loaded') || !exists('g:loaded_commentary')
+if exists('b:plugin_loaded')
   finish
 endif
 
@@ -38,6 +38,9 @@ function! vue#SetConfigs()
   endif
 endfunction
 
-autocmd CursorMoved,CursorMovedI * call vue#SetConfigs()
+if exists('g:loaded_commentary')
+  autocmd CursorMoved,CursorMovedI * call vue#SetConfigs()
+endif
+
 
 let b:plugin_loaded = 1
