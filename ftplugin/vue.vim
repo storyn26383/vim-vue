@@ -41,7 +41,7 @@ function! vue#SetConfigs()
 endfunction
 
 if exists('g:loaded_commentary')
-  autocmd CursorMoved,CursorMovedI * call vue#SetConfigs()
+  autocmd CursorMoved,CursorMovedI *.vue call vue#SetConfigs()
 endif
 
 
