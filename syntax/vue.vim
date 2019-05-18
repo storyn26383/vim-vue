@@ -24,7 +24,7 @@ silent! syntax include @typescript syntax/typescript.vim
 unlet! b:current_syntax
 
 syntax keyword htmlTagName contained template
-syntax keyword htmlArg contained lang scoped
+syntax keyword htmlArg contained lang scoped functional
 syntax keyword htmlArg contained ref slot
 syntax match   htmlTagName "[-0-9a-z]" contained
 syntax match   htmlArg "[@v:]\?[-:.0-9_a-z]" contained
