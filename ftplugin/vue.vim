@@ -3,7 +3,7 @@ if exists('b:plugin_loaded')
 endif
 
 function! vue#IdentifySyntaxRegion()
-  let l:line = search('<\(template\|script\|style\)[^>]*>', 'bn')
+  let l:line = search('<\(template\|script\|style\|i18n\)[^>]*>', 'bn')
   let l:cline = line('.')
   let l:content = get(getbufline(bufnr('%'), l:line, l:line), '')
 
@@ -21,6 +21,8 @@ function! vue#IdentifySyntaxRegion()
     return 'javascript'
   elseif l:content =~ '<template \+lang="pug"[^>]*>'
     return 'pug'
+  elseif l:content =~ '<i18n>'
+    return 'yaml'
   else
     return 'html'
   endif
@@ -37,6 +39,8 @@ function! vue#SetConfigs()
     setlocal commentstring=//-\ %s
   elseif l:type =~ 'typescript\|javascript\|scss\|stylus' && &commentstring != '// %s'
     setlocal commentstring=//\ %s
+  elseif l:type == 'yaml' && &commentstring != '# %s'
+    setlocal commentstring=#\ %s
   endif
 endfunction
 
