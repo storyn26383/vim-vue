@@ -48,5 +48,9 @@ if exists('g:loaded_commentary')
   autocmd CursorMoved,CursorMovedI *.vue call vue#SetConfigs()
 endif
 
+nnoremap <silent> <buffer> [[ :call search('^<\(template\<Bar>script\<Bar>style\<Bar>i18n\)', 'bW')<CR>
+nnoremap <silent> <buffer> ]] :call search('^<\(template\<Bar>script\<Bar>style\<Bar>i18n\)', 'W')<CR>
+nnoremap <silent> <buffer> [] :call search('^</\(template\<Bar>script\<Bar>style\<Bar>i18n\)', 'bW')<CR>
+nnoremap <silent> <buffer> ][ :call search('^</\(template\<Bar>script\<Bar>style\<Bar>i18n\)', 'W')<CR>
 
 let b:plugin_loaded = 1
