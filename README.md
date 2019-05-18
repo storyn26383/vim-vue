@@ -28,10 +28,10 @@ Plugin 'storyn26383/vim-vue'
 
 ## Recommended Plugins
 
-- [vim-commentary](https://github.com/tpope/vim-commentary')
-- [vim-pug](https://github.com/digitaltoad/vim-pug')
-- [vim-javascript](https://github.com/pangloss/vim-javascript')
-- [typescript-vim](https://github.com/leafgarland/typescript-vim')
-- [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax')
-- [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim')
-- [vim-stylus](https://github.com/iloginow/vim-stylus')
+- [vim-commentary](https://github.com/tpope/vim-commentary)
+- [vim-pug](https://github.com/digitaltoad/vim-pug)
+- [vim-javascript](https://github.com/pangloss/vim-javascript)
+- [typescript-vim](https://github.com/leafgarland/typescript-vim)
+- [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
+- [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim)
+- [vim-stylus](https://github.com/iloginow/vim-stylus)
