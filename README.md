@@ -26,7 +26,7 @@ Add the following to your `.vimrc` then run `:PluginInstall`
 Plugin 'storyn26383/vim-vue'
 ```
 
-### Recommended Plugins
+## Recommended Plugins
 
 - [vim-commentary](https://github.com/tpope/vim-commentary')
 - [vim-pug](https://github.com/digitaltoad/vim-pug')
