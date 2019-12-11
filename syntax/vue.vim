@@ -11,6 +11,9 @@ unlet! b:current_syntax
 silent! syntax include @css syntax/css.vim
 unlet! b:current_syntax
 
+silent! syntax include @sass syntax/sass.vim
+unlet! b:current_syntax
+
 silent! syntax include @scss syntax/scss.vim
 unlet! b:current_syntax
 
@@ -38,6 +41,7 @@ syntax region  vueTemplate keepend start=/<template \+lang="pug"[^>]*>/ end=/<\/
 syntax region  vueScript keepend start=/<script[^>]*>/ end=/<\/script>/ contains=@javascript,vueTagName fold
 syntax region  vueScript keepend start=/<script \+lang="ts"[^>]*>/ end=/<\/script>/ contains=@typescript,vueTagName fold
 syntax region  vueStyle keepend start=/<style[^>]*>/ end=/<\/style>/ contains=@css,vueTagName fold
+syntax region  vueStyle keepend start=/<style \+lang="sass"[^>]*>/ end=/<\/style>/ contains=@sass,vueTagName fold
 syntax region  vueStyle keepend start=/<style \+lang="scss"[^>]*>/ end=/<\/style>/ contains=@scss,vueTagName fold
 syntax region  vueStyle keepend start=/<style \+lang="stylus"[^>]*>/ end=/<\/style>/ contains=@stylus,vueTagName fold
 syntax region  vueI18n keepend start=/<i18n>/ end=/<\/i18n>/ contains=@yaml,vueTagName fold
