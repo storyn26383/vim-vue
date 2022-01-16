@@ -32,7 +32,7 @@ unlet! b:current_syntax
 syntax keyword htmlTagName contained template i18n router
 syntax keyword htmlArg contained lang scoped functional
 syntax keyword htmlArg contained ref slot
-syntax match   htmlTagName "[-0-9a-z]" contained
+syntax match   htmlTagName "[-0-9a-zA-Z]" contained
 syntax match   htmlArg "[@v:]\?[-:.0-9_a-z]" contained
 
 syntax region  vueTagName contained start=/<\/\?\(template\|script\|style\|i18n\|router\)/ end=/>/ contains=htmlTagN,htmlTagName,htmlArg,htmlString fold
