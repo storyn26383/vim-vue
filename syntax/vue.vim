@@ -20,6 +20,9 @@ unlet! b:current_syntax
 silent! syntax include @stylus syntax/stylus.vim
 unlet! b:current_syntax
 
+silent! syntax include @postcss syntax/postcss.vim
+unlet! b:current_syntax
+
 silent! syntax include @javascript syntax/javascript.vim
 unlet! b:current_syntax
 
@@ -44,6 +47,7 @@ syntax region  vueStyle keepend start=/<style[^>]*>/ end=/<\/style>/ contains=@c
 syntax region  vueStyle keepend start=/<style \+lang="sass"[^>]*>/ end=/<\/style>/ contains=@sass,vueTagName fold
 syntax region  vueStyle keepend start=/<style \+lang="scss"[^>]*>/ end=/<\/style>/ contains=@scss,vueTagName fold
 syntax region  vueStyle keepend start=/<style \+lang="stylus"[^>]*>/ end=/<\/style>/ contains=@stylus,vueTagName fold
+syntax region  vueStyle keepend start=/<style \+lang="postcss"[^>]*>/ end=/<\/style>/ contains=@postcss,vueTagName fold
 syntax region  vueI18n keepend start=/<i18n>/ end=/<\/i18n>/ contains=@yaml,vueTagName fold
 syntax region  vueRouter keepend start=/<router>/ end=/<\/router>/ contains=@yaml,vueTagName fold
 

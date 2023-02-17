@@ -2,7 +2,7 @@ if exists('b:did_indent')
   finish
 endif
 
-let s:languages = ['html', 'pug', 'typescript', 'javascript', 'css', 'sass', 'scss', 'stylus', 'yaml']
+let s:languages = ['html', 'pug', 'typescript', 'javascript', 'css', 'sass', 'scss', 'stylus', 'postcss', 'yaml']
 let s:indentexpr = {}
 
 for s:language in s:languages

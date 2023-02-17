@@ -16,6 +16,7 @@ Vim syntax highlighting for Vue components.
   - CASS
   - SCSS
   - Stylus
+  - PostCSS
 
 ## Installation
 
