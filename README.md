@@ -13,7 +13,7 @@ Vim syntax highlighting for Vue components.
   - JavaScript
   - TypeScript
   - CSS
-  - CASS
+  - SASS
   - SCSS
   - Stylus
   - PostCSS
