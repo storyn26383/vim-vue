@@ -30,7 +30,7 @@ silent! syntax include @yaml syntax/yaml.vim
 unlet! b:current_syntax
 
 syntax keyword htmlTagName contained template i18n router
-syntax keyword htmlArg contained lang scoped functional
+syntax keyword htmlArg contained lang scoped functional setup generic
 syntax keyword htmlArg contained ref slot
 syntax match   htmlTagName "[-0-9a-zA-Z]" contained
 syntax match   htmlArg "[@v:]\?[-:.0-9_a-z]" contained
@@ -39,7 +39,7 @@ syntax region  vueTagName contained start=/<\/\?\(template\|script\|style\|i18n\
 
 syntax region  vueTemplate keepend start=/<template \+lang="pug"[^>]*>/ end=/<\/template>/ contains=@pug,vueTagName fold
 syntax region  vueScript keepend start=/<script[^>]*>/ end=/<\/script>/ contains=@javascript,vueTagName fold
-syntax region  vueScript keepend start=/<script \+lang="ts"[^>]*>/ end=/<\/script>/ contains=@typescript,vueTagName fold
+syntax region  vueScript keepend start=/<script\( \+setup\)\? \+lang="ts"[^>]*>/ end=/<\/script>/ contains=@typescript,vueTagName fold
 syntax region  vueStyle keepend start=/<style[^>]*>/ end=/<\/style>/ contains=@css,vueTagName fold
 syntax region  vueStyle keepend start=/<style \+lang="sass"[^>]*>/ end=/<\/style>/ contains=@sass,vueTagName fold
 syntax region  vueStyle keepend start=/<style \+lang="scss"[^>]*>/ end=/<\/style>/ contains=@scss,vueTagName fold
